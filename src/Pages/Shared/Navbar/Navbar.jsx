@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchBox from "./SearchBox";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +18,7 @@ const Navbar = () => {
         </div>
 
         {/* Search Bar */}
+        
 
         {/* Hamburger Menu Button */}
         <div className="sm:hidden">
@@ -118,6 +118,7 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
+      
     </div>
   );
 };
