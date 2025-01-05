@@ -3,7 +3,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="container mx-auto px-6 py-10">
+    <div className="container mx-auto px-6 py-10  text-justify">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-6">About Us</h1>
       <p className="text-lg text-gray-600 mb-4">
         Welcome to <span className="font-semibold text-green-600">[Your Brand Name]</span>, where we believe that shopping should be an enjoyable and seamless experience. Founded in [Year], our mission is to provide customers with a diverse range of high-quality products at competitive prices, all while delivering exceptional customer service.
