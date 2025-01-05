@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-white bg-opacity-50 backdrop-blur-md shadow-md left-0 z-30">
+    <div className="w-full  bg-opacity-50 backdrop-blur-md shadow-md left-0 z-30">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
         {/* Logo */}
         <div className="text-2xl font-semibold cursor-pointer">

@@ -6,7 +6,6 @@ import SubcategoryPage from "../Pages/Home/ProductCategory/SubcategoryPage";
 import CategoryPage from "../Pages/Home/ProductCategory/CategoryPage";
 import Home from "../Pages/Home/Home/Home";
 import CustomerCare from "../Pages/CustomerCare/CustomerCare";
-import About from "../Pages/About/About/About"
 
 
 export const router = createBrowserRouter([
@@ -33,10 +32,6 @@ export const router = createBrowserRouter([
       {
         path: "/customer-care",
         element: <CustomerCare/>, // Products Page
-      },
-      {
-        path: "about",
-        element: <About/>
       },
     ],
   },

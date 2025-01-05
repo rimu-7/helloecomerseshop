@@ -32,17 +32,17 @@ const SearchBox = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center container mx-auto py-4 w-full px-4">
-      <div className="relative w-full md:w-80">
-        {/* Search Input Wrapper with Background Blur */}
-        <div className="bg-white bg-opacity-70 backdrop-blur-md rounded-full shadow-lg">
+    <div className="relative  flex items-center justify-center bg-gray-50">
+      {/* Search Box */}
+      <div className="relative w-full max-w-md px-4 py-6">
+        <div className="bg-white bg-opacity-80 backdrop-blur-md rounded-full shadow-lg">
           <input
             type="text"
             value={query}
             onChange={handleSearchChange}
             onKeyPress={handleKeyPress}
             placeholder="Search products..."
-            className="w-full max-w-md py-2 pl-10 pr-4 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all ease-in-out duration-300 shadow-sm hover:shadow-md mx-auto"
+            className="w-full py-2 pl-12 pr-4 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all ease-in-out duration-300 shadow-sm hover:shadow-md"
           />
 
           {/* Search Icon */}
@@ -102,10 +102,8 @@ const SearchBox = () => {
       </div>
 
       {/* Social Media Icons */}
-      <div className="mt-4 md:mt-0 md:ml-4">
-        <div className="bg-opacity-50 backdrop-blur-lg">
-          <SocialMedia />
-        </div>
+      <div className="absolute top-4 right-4">
+        <SocialMedia />
       </div>
     </div>
   );
