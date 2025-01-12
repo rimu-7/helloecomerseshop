@@ -59,7 +59,7 @@ const ProductCartPage = () => {
                 key={index}
                 onClick={() => setSelectedImage(index)}
                 className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ease-in-out ${
-                  selectedImage === index ? "border-green-300 scale-105" : "border-gray-300"
+                  selectedImage === index ? "border-blue-600 scale-105" : "border-gray-300"
                 }`}
               >
                 <img
@@ -83,7 +83,7 @@ const ProductCartPage = () => {
             <select
               value={color}
               onChange={(e) => setColor(e.target.value)}
-              className="border border-green-300 rounded-lg p-2 transition-colors duration-300 ease-in-out focus:ring-2 focus:ring-green-500"
+              className="border border-gray-300 rounded-lg p-2 transition-colors duration-300 ease-in-out focus:ring-2 focus:ring-blue-500"
             >
               {product.colors.map((colorOption) => (
                 <option key={colorOption} value={colorOption}>
@@ -99,7 +99,7 @@ const ProductCartPage = () => {
             <select
               value={size}
               onChange={(e) => setSize(e.target.value)}
-              className="border border-green-300 rounded-lg p-2 transition-colors duration-300 ease-in-out focus:ring-2 focus:ring-green-500"
+              className="border border-gray-300 rounded-lg p-2 transition-colors duration-300 ease-in-out focus:ring-2 focus:ring-blue-500"
             >
               {product.sizes.map((sizeOption) => (
                 <option key={sizeOption} value={sizeOption}>
@@ -117,7 +117,7 @@ const ProductCartPage = () => {
               value={quantity}
               onChange={(e) => setQuantity(Math.max(1, e.target.value))}
               min="1"
-              className="border border-green-300 rounded-lg p-2 w-20 transition-colors duration-300 ease-in-out focus:ring-2 focus:ring-green-500"
+              className="border border-gray-300 rounded-lg p-2 w-20 transition-colors duration-300 ease-in-out focus:ring-2 focus:ring-blue-500"
             />
           </div>
 

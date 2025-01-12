@@ -12,7 +12,7 @@ const SocialMedia = () => {
   };
 
   return (
-    <div className="flex justify-center gap-4 py-4">
+    <div className="flex justify-center space-x-1 mr-4">
       {/* Facebook Icon */}
       <a
         href={socialLinks.facebook}
@@ -20,7 +20,7 @@ const SocialMedia = () => {
         rel="noopener noreferrer"
         className="text-gray-700 hover:text-blue-600 transition-all ease-in-out duration-300"
       >
-        <FaFacebook className="h-6 w-6" />
+        <FaFacebook className="h- w-" />
       </a>
 
       {/* Instagram Icon */}
@@ -30,7 +30,7 @@ const SocialMedia = () => {
         rel="noopener noreferrer"
         className="text-gray-700 hover:text-pink-500 transition-all ease-in-out duration-300"
       >
-        <FaInstagram className="h-6 w-6" />
+        <FaInstagram className="h- w-" />
       </a>
 
       {/* Twitter Icon */}
@@ -40,7 +40,7 @@ const SocialMedia = () => {
         rel="noopener noreferrer"
         className="text-gray-700 hover:text-blue-400 transition-all ease-in-out duration-300"
       >
-        <FaTwitter className="h-6 w-6" />
+        <FaTwitter className="h- w-" />
       </a>
 
       {/* Pinterest Icon */}
@@ -50,7 +50,7 @@ const SocialMedia = () => {
         rel="noopener noreferrer"
         className="text-gray-700 hover:text-red-600 transition-all ease-in-out duration-300"
       >
-        <FaPinterest className="h-6 w-6" />
+        <FaPinterest className="h- w-" />
       </a>
 
       {/* WhatsApp Icon */}
@@ -60,7 +60,7 @@ const SocialMedia = () => {
         rel="noopener noreferrer"
         className="text-gray-700 hover:text-green-500 transition-all ease-in-out duration-300"
       >
-        <FaWhatsapp className="h-6 w-6" />
+        <FaWhatsapp className="h- w-" />
       </a>
 
       {/* LinkedIn Icon */}
@@ -70,7 +70,7 @@ const SocialMedia = () => {
         rel="noopener noreferrer"
         className="text-gray-700 hover:text-blue-700 transition-all ease-in-out duration-300"
       >
-        <FaLinkedin className="h-6 w-6" />
+        <FaLinkedin className="h- w-" />
       </a>
     </div>
   );

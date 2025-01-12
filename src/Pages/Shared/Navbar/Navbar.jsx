@@ -1,39 +1,45 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBox";
-import SocialMedia from "../social-media-icons/SocialMedia";
-import Message from "./message";
+import { BiHome } from "react-icons/bi";
+import { BsFillPeopleFill } from "react-icons/bs";
+import ProductSearchCard from "../Search/Searchwork";
+import Message from "./Message";
 import AddToCartButton from "./AddToCartButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // const openSearch = () => {
+  //   setIsOpen((h) => !h);
+  // }
+
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen); // Proper state toggle
   };
 
   return (
-    <div className="w-full  bg-opacity-50 backdrop-blur-md shadow-md left-0 z-30">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
-        {/* Logo */}
-        <div className="text-2xl font-semibold cursor-pointer">
-          <Link to="/">BrandName</Link>
+    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg">
+      <div className="flex items-center justify-between px-4  relative">
+        {/* Search Box */}
+        <div className="text-2xl flex items-center">
+          <BiHome />
+          <div className="px-3">
+            <BsFillPeopleFill />
+          </div>
+        </div>
+        <div className="w-full px-4">
+          <ProductSearchCard />
         </div>
 
-        {/* Search Bar */}
-        <div className="hidden sm:block">{/* <SearchBar /> */}</div>
-        <div className="sm:flex items-center space-x-4">
+        {/* Social Media Icons or Additional Buttons */}
+        <div className="flex items-center space-x-2">
           <Message />
-          {/* <SocialMedia /> */}
-        </div>
-        <div className="sm:flex items-center space-x-4">
           <AddToCartButton />
-          {/* <SocialMedia /> */}
-        </div>
-
-        {/* Hamburger Menu Button */}
-        <div className="sm:hidden">
-          <button className="focus:outline-none" onClick={toggleMenu}>
+          <button
+            className="focus:outline-none sm:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -54,48 +60,40 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
+      </div>
 
-        {/* Navigation Links */}
-        <nav
-          className={`${
-            isOpen ? "block" : "hidden"
-          } bg-white bg-opacity-80 backdrop-blur-md absolute top-full left-0 w-full sm:static sm:flex sm:w-auto sm:ml-8 sm:bg-transparent transition-all duration-300 ease-in-out`}
-        >
-          <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-gray-70000 text-right p-4 sm:p-0 rounded-md sm:w-auto sm:max-w-4xl">
-            <li className="relative group">
-              <Link
-                to="/"
-                className="hover:text-green-500 transition duration-300 ease-in-out"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/shipping-agencies"
-                className="hover:text-green-500 transition duration-300 ease-in-out"
-              >
-                Shipping Agencies
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className="hover:text-green-500 transition duration-300 ease-in-out"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/login"
-                className="hover:text-green-500 transition duration-300 ease-in-out"
-              >
-                Login
-              </Link>
-            </li>
-          </ul>
-        </nav>
+      {/* Dropdown Menu */}
+      <div
+        className={`absolute left-0 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"
+          }`}
+      >
+        <ul className="flex flex-col ml-4 sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right p-4 sm:p-0">
+          <li>
+            <Link to="/" className="animate-button">
+              MEN
+            </Link>
+          </li>
+          <li>
+            <Link to="/shipping-agencies" className="animate-button">
+              WOMEN
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="animate-button">
+              KIDS
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" className="animate-button">
+              ELECTRONICS
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" className="animate-button">
+              BUILDINGS
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );
