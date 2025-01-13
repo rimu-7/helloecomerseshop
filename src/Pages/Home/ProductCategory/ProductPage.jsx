@@ -35,7 +35,7 @@ const ProductPage = () => {
           products.map((product) => (
             <div
               key={product.id}
-              className="p-4 bg-green-200 hover:bg-green-300 rounded-md shadow-md"
+              className="p-4 bg-green-100 hover:bg-green-200 rounded-md shadow-md"
             >
               <h3 className="text-xl font-semibold text-gray-700">{product.name}</h3>
               <p className="text-gray-500">Price: ${product.price}</p>

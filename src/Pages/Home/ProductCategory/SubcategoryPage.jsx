@@ -27,7 +27,7 @@ const SubcategoryPage = () => {
         {subcategories.map((subcategory) => (
           <div
             key={subcategory.id}
-            className="p-4 bg-green-200 hover:bg-green-300 cursor-pointer rounded-md shadow-md"
+            className="p-4 bg-pink-100 hover:bg-pink-200 cursor-pointer rounded-md shadow-md"
             onClick={() => handleSubcategoryClick(subcategory)}
           >
             <h3 className="text-xl font-semibold text-gray-700">{subcategory.name}</h3>
