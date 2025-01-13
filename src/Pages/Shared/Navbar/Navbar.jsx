@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg">
+    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-2">
       <div className="flex items-center justify-between px-4  relative">
         {/* Search Box */}
         <div className="text-2xl flex items-center">
@@ -26,14 +26,49 @@ const Navbar = () => {
           <div className="px-3">
             <BsFillPeopleFill />
           </div>
+
         </div>
-        <div className="w-full px-4">
-          <ProductSearchCard />
+
+        {/* Dropdown Menu */}
+        <div
+          className={`absolute left-0 top-16 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"
+            }`}
+        >
+          <ul className="flex flex-col ml-4 sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right p-4 sm:p-0">
+            <li>
+              <Link to="/" className="animate-button">
+                MEN
+              </Link>
+            </li>
+            <li>
+              <Link to="/shipping-agencies" className="animate-button">
+                WOMEN
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="animate-button">
+                KIDS
+              </Link>
+            </li>
+            <li>
+              <Link to="/login" className="animate-button">
+                ELECTRONICS
+              </Link>
+            </li>
+            <li>
+              <Link to="/login" className="animate-button">
+                BUILDINGS
+              </Link>
+            </li>
+          </ul>
         </div>
 
         {/* Social Media Icons or Additional Buttons */}
         <div className="flex items-center space-x-2">
-          <Message />
+          <div className="px-3">
+            <ProductSearchCard />
+          </div>
+          {/* <Message /> */}
           <AddToCartButton />
           <button
             className="focus:outline-none sm:hidden"
@@ -62,39 +97,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Dropdown Menu */}
-      <div
-        className={`absolute left-0 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"
-          }`}
-      >
-        <ul className="flex flex-col ml-4 sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right p-4 sm:p-0">
-          <li>
-            <Link to="/" className="animate-button">
-              MEN
-            </Link>
-          </li>
-          <li>
-            <Link to="/shipping-agencies" className="animate-button">
-              WOMEN
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="animate-button">
-              KIDS
-            </Link>
-          </li>
-          <li>
-            <Link to="/login" className="animate-button">
-              ELECTRONICS
-            </Link>
-          </li>
-          <li>
-            <Link to="/login" className="animate-button">
-              BUILDINGS
-            </Link>
-          </li>
-        </ul>
-      </div>
+
     </div>
   );
 };
