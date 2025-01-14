@@ -69,18 +69,22 @@ const ProductPage = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="">
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-green-100 text-green-500 text-center font-mono px-6 mx-auto py-4">
+              Products
+            </div>
       <main className="py-2 px-2 md:px-4">
         {" "}
         {/* Reduced padding even further */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2">
-            {" "}
+        
+          <div className="pt-5 grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2">
+            
             {/* Tightened gaps */}
             {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white border border-gray-200 rounded-sm shadow-sm" // Smaller rounded corners
+                className="bg-white borde-2 border-gray-200 rounded-sm shadow-sm" // Smaller rounded corners
               >
                 <div className="relative">
                   {" "}

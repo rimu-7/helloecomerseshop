@@ -32,7 +32,7 @@ const Navbar = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <ul className="flex flex-col ml-4 sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right p-4 sm:p-0">
+          <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-gray-700 text-right p-4 sm:p-0">
             <li>
               <Link to="/" className="animate-button">
                 MEN
@@ -62,7 +62,7 @@ const Navbar = () => {
         </div>
 
         {/* Icons Container */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
           <div className="hover:transition hover:duration-300 hover:text-green-600">
             <ProductSearchCard />
           </div>

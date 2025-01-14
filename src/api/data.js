@@ -48,7 +48,7 @@ export const fetchSections = () => {
       },
       {
         id: 3,
-        name: "Eyesores",
+        name: "Exesores",
         subcategories: [
           {
             id: 301,

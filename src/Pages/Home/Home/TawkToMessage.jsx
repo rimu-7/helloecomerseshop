@@ -50,15 +50,7 @@ function TawkToMessage() {
 
   return (
     <div className="App">
-      <h1>Welcome to Our Website</h1>
       
-      {/* Button to Minimize Chat */}
-      <button onClick={handleMinimize}>Minimize the Chat</button>
-      
-      {/* Button to Toggle Chat Visibility */}
-      <button onClick={handleToggleChat}>
-        {isVisible ? 'Hide' : 'Show'} the Chat
-      </button>
 
       {/* Tawk Messenger React Component */}
       <TawkMessengerReact
