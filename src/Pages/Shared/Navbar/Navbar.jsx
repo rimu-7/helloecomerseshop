@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BiHome } from "react-icons/bi";
-import { BsFillPeopleFill } from "react-icons/bs";
+import { IoMdPerson } from "react-icons/io";
 import ProductSearchCard from "../Search/Searchwork";
 import Message from "./Message";
 import AddToCartButton from "./AddToCartButton";
@@ -23,16 +23,16 @@ const Navbar = () => {
         {/* Search Box */}
         <div className="text-2xl flex items-center">
           <BiHome />
-          <div className="px-3">
-            <BsFillPeopleFill />
+          <div className="px-3 hover:text-green-300 hover:transition hover:duration-300">
+            <IoMdPerson />
           </div>
-
         </div>
 
         {/* Dropdown Menu */}
         <div
-          className={`absolute left-0 top-16 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"
-            }`}
+          className={`absolute left-0 top-16 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${
+            isOpen ? "block" : "hidden"
+          }`}
         >
           <ul className="flex flex-col ml-4 sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right p-4 sm:p-0">
             <li>
@@ -64,8 +64,8 @@ const Navbar = () => {
         </div>
 
         {/* Social Media Icons or Additional Buttons */}
-        <div className="flex items-center space-x-2">
-          <div className="px-3">
+        <div className="flex items-center space-x-2 ">
+          <div className="px-3  hover:text-green-300 hover:transition hover:duration-300">
             <ProductSearchCard />
           </div>
           {/* <Message /> */}
@@ -96,8 +96,6 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
-
     </div>
   );
 };
