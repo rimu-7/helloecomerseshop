@@ -59,7 +59,9 @@ const ProductCartPage = () => {
                 key={index}
                 onClick={() => setSelectedImage(index)}
                 className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ease-in-out ${
-                  selectedImage === index ? "border-blue-600 scale-105" : "border-gray-300"
+                  selectedImage === index
+                    ? "border-blue-600 scale-105"
+                    : "border-gray-300"
                 }`}
               >
                 <img
@@ -74,7 +76,9 @@ const ProductCartPage = () => {
 
         {/* Right Section: Product Details */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-semibold text-gray-800">{product.name}</h2>
+          <h2 className="text-3xl font-semibold text-gray-800">
+            {product.name}
+          </h2>
           <p className="text-xl text-gray-600">${product.price}</p>
 
           {/* Color Selection */}

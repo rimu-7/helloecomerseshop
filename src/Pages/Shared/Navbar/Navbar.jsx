@@ -9,21 +9,19 @@ import AddToCartButton from "./AddToCartButton";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const openSearch = () => {
-  //   setIsOpen((h) => !h);
-  // }
-
   const toggleMenu = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen); // Proper state toggle
   };
 
   return (
     <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-2">
-      <div className="flex items-center justify-between px-4  relative">
+      <div className="flex items-center justify-between px-4 relative">
         {/* Search Box */}
-        <div className="text-2xl flex items-center">
-          <BiHome />
-          <div className="px-3 hover:text-green-300 hover:transition hover:duration-300">
+        <div className="text-2xl flex items-center ">
+          <div className="hover:text-green-600 hover:transition hover:duration-300">
+            <BiHome />
+          </div>
+          <div className="px-3 hover:text-green-600 hover:transition hover:duration-300">
             <IoMdPerson />
           </div>
         </div>
@@ -63,38 +61,40 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Social Media Icons or Additional Buttons */}
-        <div className="flex items-center space-x-2 ">
-          <div className="px-3  hover:text-green-300 hover:transition hover:duration-300">
+        {/* Icons Container */}
+        <div className="flex items-center space-x-4">
+          <div className="hover:transition hover:duration-300 hover:text-green-600">
             <ProductSearchCard />
           </div>
-          {/* <Message /> */}
           <AddToCartButton />
-          <button
-            className="focus:outline-none sm:hidden"
-            onClick={toggleMenu}
-            aria-label="Toggle Menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={
-                  isOpen
-                    ? "M6 18L18 6M6 6l12 12" // X icon when open
-                    : "M4 6h16M4 12h16M4 18h16" // Hamburger icon when closed
-                }
-              ></path>
-            </svg>
-          </button>
+          <Message />
         </div>
+
+        {/* Toggle Button */}
+        <button
+          className="focus:outline-none sm:hidden"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d={
+                isOpen
+                  ? "M6 18L18 6M6 6l12 12" // X icon when open
+                  : "M4 6h16M4 12h16M4 18h16" // Hamburger icon when closed
+              }
+            ></path>
+          </svg>
+        </button>
       </div>
     </div>
   );
