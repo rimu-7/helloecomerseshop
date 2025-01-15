@@ -34,7 +34,7 @@ const Message = ({ text, sender, timestamp }) => {
           target="_blank" // Open in a new tab
           rel="noopener noreferrer" // Security best practice
         >
-          <FaWhatsapp className="text-xl hover:transition hover:duration-300 hover:text-green-500 " />
+          <FaWhatsapp className="text-lg hover:transition hover:duration-300 hover:text-green-500 " />
         </a>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BiHome } from "react-icons/bi";
 import { IoMdPerson } from "react-icons/io";
@@ -10,19 +10,19 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen); // Proper state toggle
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   return (
-    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-2">
-      <div className="flex items-center justify-between px-4 relative">
+    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg">
+      <div className="flex items-center justify-between px-4 py-2">
         {/* Search Box */}
-        <div className="text-2xl flex items-center ">
-          <div className="hover:text-green-600 hover:transition hover:duration-300">
-            <BiHome />
+        <div className="ml-96 mb-4 mr-3 flex items-center space-x-4">
+          <div className="hover:text-green-600 transition duration-300">
+            <BiHome size={24} />
           </div>
-          <div className="px-3 hover:text-green-600 hover:transition hover:duration-300">
-            <IoMdPerson />
+          <div className="hover:text-green-600 transition duration-300">
+            <IoMdPerson size={24} />
           </div>
         </div>
 
@@ -32,7 +32,7 @@ const Navbar = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-gray-700 text-right p-4 sm:p-0">
+          <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-gray-700 text-center p-4 sm:p-0">
             <li>
               <Link to="/" className="animate-button">
                 MEN
@@ -62,10 +62,12 @@ const Navbar = () => {
         </div>
 
         {/* Icons Container */}
-        <div className="flex items-center space-x-2">
-          <div className="hover:transition hover:duration-300 hover:text-green-600">
+        <div className="ml-3 mr-3 text-lg mb-1 hover:text-green-600 transition duration-300">
             <ProductSearchCard />
           </div>
+          
+        <div className="mr-96 mb-3 flex items-center space-x-4">
+          
           <AddToCartButton />
           <Message />
         </div>
