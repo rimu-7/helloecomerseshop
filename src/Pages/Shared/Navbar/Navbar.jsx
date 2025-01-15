@@ -90,7 +90,7 @@ const Navbar = () => {
               >
                 <GoPeople />
               </Link>
-              <div className="flex-1 flex justify-center py-2   hover:text-green-600 hover:transition-colors duration-200">
+              <div className="flex-1 flex justify-center mt-2   hover:text-green-600 hover:transition-colors duration-200">
                 <ProductSearchCard />
               </div>
               <div className="flex-1 flex justify-center py-2   hover:text-green-600 hover:transition-colors duration-200">
