@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {  FaChevronDown } from "react-icons/fa";
-import { FiSearch } from "react-icons/fi";
+import { FaSearch, FaChevronDown } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 
 const ProductSearchCard = () => {
@@ -178,9 +177,9 @@ const ProductSearchCard = () => {
   return (
     <div>
       {/* Trigger to open the modal */}
-      <div className="relative">
+      <div className="">
         <button onClick={() => setShowModal(true)}>
-          <FiSearch />
+          <FaSearch />
         </button>
       </div>
 

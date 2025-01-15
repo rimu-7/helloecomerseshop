@@ -10,7 +10,6 @@ const AddToCartButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="flex items-center rounded-md hover:transition hover:text-green-600 hover:duration-300"
     >
       <FiShoppingCart />
     </button>

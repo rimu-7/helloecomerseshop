@@ -1,8 +1,7 @@
 // Message.jsx
 import React from "react";
 import PropTypes from "prop-types";
-import { FaWhatsapp } from "react-icons/fa";
-
+import { BsWhatsapp } from "react-icons/bs";
 const Message = ({ text, sender, timestamp }) => {
   console.log("Timestamp:", timestamp); // Debugging line
 
@@ -30,11 +29,13 @@ const Message = ({ text, sender, timestamp }) => {
       <div className="message-footer">
         <a
           href={whatsappLink}
-          className="text-gray-700 rounded-md p-2 ease-in-out"
+          className=" rounded-md  ease-in-out"
           target="_blank" // Open in a new tab
           rel="noopener noreferrer" // Security best practice
         >
-          <FaWhatsapp className="text-lg hover:transition hover:duration-300 hover:text-green-500 " />
+          <div className=" hover:text-green-600 hover:transition-colors duration-200">
+            <BsWhatsapp />
+          </div>
         </a>
       </div>
     </div>
