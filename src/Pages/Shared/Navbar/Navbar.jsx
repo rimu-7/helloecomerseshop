@@ -18,11 +18,11 @@ const Navbar = () => {
       <div className="flex items-center justify-between px-4 py-2">
         {/* Search Box */}
         <div className="ml-96 mb-4 mr-3 flex items-center space-x-4">
-          <div className="hover:text-green-600 transition duration-300">
-            <BiHome size={24} />
+          <div className="text-xl hover:text-green-600 transition duration-300">
+            <BiHome  />
           </div>
-          <div className="hover:text-green-600 transition duration-300">
-            <IoMdPerson size={24} />
+          <div className="text-xl hover:text-green-600 transition duration-300">
+            <IoMdPerson />
           </div>
         </div>
 
@@ -67,9 +67,8 @@ const Navbar = () => {
           </div>
           
         <div className="mr-96 mb-3 flex items-center space-x-4">
-          
           <AddToCartButton />
-          <Message />
+          <Message  className=""/>
         </div>
 
         {/* Toggle Button */}
