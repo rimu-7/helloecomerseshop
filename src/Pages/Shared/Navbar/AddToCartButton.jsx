@@ -1,7 +1,6 @@
 // AddToCartButton.jsx
 import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
-
+import { FiShoppingCart } from "react-icons/fi";
 const AddToCartButton = () => {
   const handleClick = () => {
     // Add your add to cart logic here
@@ -13,7 +12,7 @@ const AddToCartButton = () => {
       onClick={handleClick}
       className="flex items-center rounded-md hover:transition hover:text-green-600 hover:duration-300"
     >
-      <FaShoppingCart className="text-lg" />
+      <FiShoppingCart />
     </button>
   );
 };

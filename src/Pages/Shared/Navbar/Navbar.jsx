@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BiHome } from "react-icons/bi";
-import { IoMdPerson } from "react-icons/io";
+// import { IoMdPerson } from "react-icons/io";
+import { IoPersonOutline } from "react-icons/io5";
 import ProductSearchCard from "../Search/Searchwork";
 import Message from "./Message";
 import AddToCartButton from "./AddToCartButton";
@@ -22,7 +23,7 @@ const Navbar = () => {
             <BiHome  />
           </div>
           <div className="text-xl hover:text-green-600 transition duration-300">
-            <IoMdPerson />
+            <IoPersonOutline />
           </div>
         </div>
 
@@ -66,9 +67,9 @@ const Navbar = () => {
             <ProductSearchCard />
           </div>
           
-        <div className="mr-96 mb-3 flex items-center space-x-4">
-          <AddToCartButton />
-          <Message  className=""/>
+        <div className="mr-96 mb-3 text-xl flex items-center space-x-4">
+          <AddToCartButton className=""/>
+          <Message  />
         </div>
 
         {/* Toggle Button */}
