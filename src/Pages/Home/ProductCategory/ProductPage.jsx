@@ -29,7 +29,7 @@ const ProductPage = () => {
 
   return (
     <div className="container mx-auto py-8">
-      <h2 className="text-3xl font-bold mb-6">Products</h2>
+      <h2 className="text-3xl font-bold mb-6">Products.....</h2>
       <div className="grid grid-cols-3 gap-4">
         {products.length > 0 ? (
           products.map((product) => (

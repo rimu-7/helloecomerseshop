@@ -7,7 +7,7 @@ import CategoryPage from '../ProductCategory/CategoryPage'
 
 const Home = () => {
     return (
-        <div className='z-10 mt-[-26px]'>
+        <div className='z-10 mt-[-26px] '>
             <CarouselTest />
             {/* <CategoryPage /> */}
             <NewArrival />

@@ -70,9 +70,9 @@ const ProductPage = () => {
 
   return (
     <div className="">
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-green-100 text-green-500 text-center font-mono px-6 mx-auto py-4">
+      {/* <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-green-100 text-green-500 text-center font-mono px-6 mx-auto py-4">
               Products
-            </div>
+            </div> */}
       <main className="py-2 px-2 md:px-4">
         {" "}
         {/* Reduced padding even further */}
