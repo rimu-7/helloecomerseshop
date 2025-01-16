@@ -39,11 +39,10 @@ const Navbar = () => {
                 <Link to="/" className=" px-">
                   <IoPersonOutline className="text-2xl hover:text-green-600 duration-200" />
                 </Link>
-                <Link to="/" className=" px-">
-                  <div className="text- hover:text-green-600 duration-200">
-                    <Message />
-                  </div>
-                </Link>
+
+                <div className="text- hover:text-green-600 duration-200">
+                  <Message />
+                </div>
               </div>
             </div>
 
@@ -164,11 +163,11 @@ const Navbar = () => {
           <Link to="/" className=" px-">
             <IoPersonOutline className="text-2xl hover:text-green-600 duration-200" />
           </Link>
-          <Link to="/" className=" px-">
-            <div className="">
-              <Message />
-            </div>
-          </Link>
+
+          <div className="">
+            <Message />
+          </div>
+
           <div className="text-2xl mt-2 hover:text-green-600 hover:duration-200">
             <ProductSearchCard />
           </div>
