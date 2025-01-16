@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BiHome } from "react-icons/bi";
-import { BsFillPeopleFill, BsWhatsapp } from "react-icons/bs";
 import { IoPersonOutline } from "react-icons/io5";
 import ProductSearchCard from "../Search/Searchwork";
 import Message from "./Message";
 import AddToCartButton from "./AddToCartButton";
-import { LuLogIn } from "react-icons/lu";
-import { GoPeople } from "react-icons/go";
-import { MdAppRegistration } from "react-icons/md";
-import { GrLogin } from "react-icons/gr";
 import { FiHeart } from "react-icons/fi";
 
 const Navbar = () => {
