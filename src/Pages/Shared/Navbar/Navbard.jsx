@@ -1,5 +1,12 @@
-import React from 'react';
-import { FaFacebook, FaInstagram, FaTwitter, FaPinterest, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import React from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaPinterest,
+  FaWhatsapp,
+  FaLinkedin,
+} from "react-icons/fa";
 
 const Navbard = () => {
   const socialLinks = {
@@ -12,12 +19,9 @@ const Navbard = () => {
   };
 
   return (
-    <div className='flex justify-between px-4 items-center'>
-      <div className='text-2xl font-mono'>
-        Brand
-      </div>
+    <div className="flex justify-between px-4 items-center">
+      <div className="text-2xl font-mono">CreaqTech</div>
       <div>
-
         <div className="flex justify-center space-x-1">
           {/* Facebook Icon */}
           <a
@@ -79,8 +83,6 @@ const Navbard = () => {
             <FaLinkedin className="h- w-" />
           </a>
         </div>
-
-
       </div>
     </div>
   );

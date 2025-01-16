@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 text-center justify">
         <p className="text-sm">
           © {new Date().getFullYear()} Your
-          <span className="font-bold"> Company Name</span>. All rights reserved.
+          <span className="font-bold"> CreaqTech</span>. All rights reserved.
         </p>
       </div>
     </footer>
