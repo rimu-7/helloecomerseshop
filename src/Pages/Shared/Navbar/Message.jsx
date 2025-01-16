@@ -1,13 +1,12 @@
-// Message.jsx
 import React from "react";
 import PropTypes from "prop-types";
 import { BsWhatsapp } from "react-icons/bs";
 
 const Message = ({ text, sender, timestamp }) => {
-  console.log("Timestamp:", timestamp); // Debugging line
+  console.log("Timestamp:", timestamp);
 
   // WhatsApp number
-  const whatsappNumber = "880193456789"; // Ensure the number is in the correct format (no + or spaces)
+  const whatsappNumber = "+880193456789"; 
   const whatsappMessage = encodeURIComponent(text); // Encode the message text for URL
 
   // Function to check if the user is on a mobile device
@@ -21,7 +20,7 @@ const Message = ({ text, sender, timestamp }) => {
     ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
     : `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`;
 
-  console.log("Generated WhatsApp Link:", whatsappLink); // Debugging log
+  console.log("Generated WhatsApp Link:", whatsappLink);
 
   return (
     <div className="message">
