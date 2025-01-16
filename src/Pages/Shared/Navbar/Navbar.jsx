@@ -10,6 +10,7 @@ import { LuLogIn } from "react-icons/lu";
 import { GoPeople } from "react-icons/go";
 import { MdAppRegistration } from "react-icons/md";
 import { GrLogin } from "react-icons/gr";
+import { FiHeart } from "react-icons/fi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,7 +87,7 @@ const Navbar = () => {
                 <ProductSearchCard />
               </div>
               <div className="mb-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
-                <GrLogin />
+                <FiHeart />
               </div>
 
               {/* <Message /> */}
@@ -172,7 +173,7 @@ const Navbar = () => {
             <ProductSearchCard />
           </div>
           <div className="text-xl hover:text-green-600 hover:duration-200">
-            <GrLogin />
+            <FiHeart />
           </div>
           <div className="text-xl mt-1 hover:text-green-600 hover:duration-200">
             <AddToCartButton />

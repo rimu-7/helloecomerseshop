@@ -59,7 +59,7 @@ const products = [
 
 const NewArrival = () => {
   return (
-    <div className="py-2 ml-4 mr-4">
+    <div className="py-2 md:ml-4 md:mr-4 m-2">
       <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-green-100 text-green-500 text-center font-mono px-6 mx-auto py-4">
         New Arrival Product...
       </div>
