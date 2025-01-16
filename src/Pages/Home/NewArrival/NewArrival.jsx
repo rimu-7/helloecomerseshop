@@ -74,11 +74,11 @@ const NewArrival = () => {
             className=" border border-gray-200  rounded-sm shadow-m"
           >
             <a href="#">
-              <div className="relative"> {/* Added relative positioning */}
+              <div className="relative"> 
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-auto object-cover rounded-t-sm" // Smaller rounded corners
+                  className="w-full h-auto object-cover rounded-t-sm"
                   style={{ aspectRatio: "3/4" }}
                 />
 

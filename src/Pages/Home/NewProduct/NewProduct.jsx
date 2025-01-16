@@ -1,4 +1,5 @@
 import React from "react";
+import { FiHeart } from "react-icons/fi";
 
 const ProductPage = () => {
   const products = [
@@ -70,52 +71,40 @@ const ProductPage = () => {
 
   return (
     <div className="">
-      {/* <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-green-100 text-green-500 text-center font-mono px-6 mx-auto py-4">
-              Products
-            </div> */}
       <main className="py-2 px-2 md:px-4">
-        {" "}
-        {/* Reduced padding even further */}
         <div className="max-w-7xl mx-auto">
-        
           <div className="pt-5 grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2">
-            
-            {/* Tightened gaps */}
             {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white borde-2 border-gray-200 rounded-sm shadow-sm" // Smaller rounded corners
+                className="relative bg-white borde-2 border-gray-200 rounded-sm shadow-sm"
               >
                 <div className="relative">
-                  {" "}
-                  {/* Added relative positioning */}
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-auto object-cover rounded-t-sm" // Smaller rounded corners
+                    className="w-full h-auto object-cover rounded-t-sm"
                     style={{ aspectRatio: "3/4" }}
                   />
                 </div>
                 <div className="p-1.5">
-                  {" "}
-                  {/* Reduced padding */}
                   <p className="text-[10px] text-gray-800 truncate">
                     {product.name}
-                  </p>{" "}
-                  {/* Smaller font size */}
-                  <div className="flex items-center justify-between mt-0.5">
-                    {" "}
-                    {/* Reduced margin top */}
-                    <p className="text-gray-900 font-medium text-[10px]">
-                      ৳ {product.price}
-                    </p>
-                    {/* Smaller font size */}
+                  </p>
+                  <div className="flex items-center space-x-1 mt-0.5">
                     {product.originalPrice && (
                       <p className="line-through text-gray-500 text-[8px]">
                         ৳ {product.originalPrice}
                       </p>
                     )}
+                    <p className="text-gray-900 font-medium text-[10px]">
+                      ৳ {product.price}
+                    </p>
                   </div>
+                </div>
+                {/* Heart Icon */}
+                <div className="absolute bottom-1 right-1">
+                  <FiHeart className="text-gray-500 hover:text-red-500 transition-colors duration-300" size={16} />
                 </div>
               </div>
             ))}
