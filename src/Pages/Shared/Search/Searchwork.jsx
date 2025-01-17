@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaSearch, FaChevronDown } from "react-icons/fa";
 import { TfiSearch } from "react-icons/tfi";
 import { FiShoppingCart, FiSearch, FiChevronDown } from "react-icons/fi";
+import { CiCamera } from "react-icons/ci";
 
 const ProductSearchCard = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -188,23 +189,23 @@ const ProductSearchCard = () => {
       {showModal && (
         <div className="fixed top-0 z-50 w-full left-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
           <div className="bg-white px-2 h-screen w-full shadow-lg overflow-y-auto relative">
-            <div className="flex sticky py-2 z-50 top-0 flex-col md:flex-row gap-4 mb-6 bg-zinc-50">
+            <div className="flex sticky py-2 z-50 top-0 flex-col md:flex-row gap-4 mb-6 ">
               <div className="relative flex-grow">
                 <input
                   type="text"
                   placeholder="Search products..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                 />
-                <FiSearch className="absolute right-3 top-3 text-gray-400 hover:transition hover:duration-300 hover:text-green-500" />
+                <CiCamera className="absolute right-3 top-3 text-gray-400 hover:transition hover:duration-300 hover:text-green-500" />
               </div>
               <div className="flex items-center justify-between">
                 <div className="relative">
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="appearance-none w-full md:w-48 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="appearance-none w-full md:w-48 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-300"
                   >
                     {categories.map((category) => (
                       <option key={category} value={category}>
@@ -233,12 +234,12 @@ const ProductSearchCard = () => {
                     className="h-60 w-full object-cover rounded-t-lg transition-transform duration-300 hover:scale-105"
                   />
                   <div className="p-4">
-                    <h2 className="text-lg font-bold text-blue-600 mb-2">
+                    <h2 className="text-lg font-bold text-green-500 mb-2">
                       {product.name}
                     </h2>
                     {/* <p className="text-gray-600 text-sm mb-4">{product.description}</p> */}
                     <div className="flex justify-between items-center">
-                      <p className="text-lg font-semibold text-green-500">
+                      <p className="text-lg font-semibold text-green-300">
                         ${product.price}
                       </p>
                       <button
