@@ -60,7 +60,7 @@ const Navbar = () => {
               >
                 <ul className="flex mt-3 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
                   <li>
-                    <Link to="/" className="animate-button">
+                    <Link to="/men" className="animate-button">
                       MEN
                     </Link>
                   </li>
