@@ -5,7 +5,7 @@ import ProductPage from "../Pages/Home/ProductCategory/ProductPage";
 import SubcategoryPage from "../Pages/Home/ProductCategory/SubcategoryPage";
 import CategoryPage from "../Pages/Home/ProductCategory/CategoryPage";
 import Home from "../Pages/Home/Home/Home";
-import CustomerCare from "../Pages/CustomerCare/CustomerCare";
+import CustomerCare from "../Pages/CustomerCare/CustomerCare"; 
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Men from "../Pages/AllProduct/Men";
 import Women from "../Pages/AllProduct/Women";
