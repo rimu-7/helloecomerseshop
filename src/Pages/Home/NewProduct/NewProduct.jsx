@@ -1,83 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiHeart } from "react-icons/fi";
+import { products as allProducts } from "../../../api/products";
 
 const ProductPage = () => {
-  const products = [
-    {
-      id: 1,
-      name: "Sports T-shirt",
-      brand: "FabriLife",
-      price: 570,
-      originalPrice: 595,
-      image: "https://picsum.photos/200/300",
-    },
-    {
-      id: 2,
-      name: "Red Sports T-shirt",
-      brand: "FabriLife",
-      price: 570,
-      originalPrice: 595,
-      image: "https://picsum.photos/id/1/200/300",
-    },
-    {
-      id: 3,
-      name: "Grey Sports T-shirt",
-      brand: "FabriLife",
-      price: 570,
-      originalPrice: null,
-      image: "https://picsum.photos/id/1/200/300",
-    },
-    {
-      id: 4,
-      name: "Blue Sports T-shirt",
-      brand: "FabriLife",
-      price: 595,
-      originalPrice: 750,
-      image: "https://picsum.photos/id/1/200/300",
-    },
-    {
-      id: 5,
-      name: "Green Sports T-shirt",
-      brand: "FabriLife",
-      price: 570,
-      originalPrice: null,
-      image: "https://picsum.photos/200/400",
-    },
-    {
-      id: 6,
-      name: "Light Grey Sports T-shirt",
-      brand: "FabriLife",
-      price: 570,
-      originalPrice: null,
-      image: "https://picsum.photos/200/500",
-    },
-    {
-      id: 7,
-      name: "Teal Sports T-shirt",
-      brand: "FabriLife",
-      price: 640,
-      originalPrice: null,
-      image: "https://picsum.photos/200/300",
-    },
-    {
-      id: 8,
-      name: "Dark Blue Sports T-shirt",
-      brand: "FabriLife",
-      price: 570,
-      originalPrice: null,
-      image: "https://picsum.photos/200/300",
-    },
-  ];
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 12; // Number of products displayed per page
+  const paginatedProducts = allProducts.slice(0, page * itemsPerPage);
+
+  const loadMore = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
 
   return (
     <div className="">
       <main className="py-2 px-2 md:px-4">
         <div className="max-w-7xl mx-auto">
           <div className="pt-5 grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2">
-            {products.map((product) => (
+            {paginatedProducts.map((product) => (
               <div
                 key={product.id}
-                className="relative bg-white borde-2 border-gray-200 rounded-sm shadow-sm"
+                className="relative bg-white border-2 border-gray-200 rounded-sm shadow-sm"
               >
                 <div className="relative">
                   <img
@@ -104,11 +46,26 @@ const ProductPage = () => {
                 </div>
                 {/* Heart Icon */}
                 <div className="absolute bottom-1 right-1">
-                  <FiHeart className="text-gray-500 hover:text-red-500 transition-colors duration-300" size={16} />
+                  <FiHeart
+                    className="text-gray-500 hover:text-red-500 transition-colors duration-300"
+                    size={16}
+                  />
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Load More Button */}
+          {paginatedProducts.length < allProducts.length && (
+            <div className="text-center mt-4">
+              <button
+                onClick={loadMore}
+                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors duration-300"
+              >
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </main>
     </div>
