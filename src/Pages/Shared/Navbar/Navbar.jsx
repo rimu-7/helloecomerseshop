@@ -27,68 +27,68 @@ const Navbar = () => {
         <div className="hidden sm:block text-center w-full">
           <div className="flex items-center justify-center space-x-3">
             <div className="">
-              <div className="flex items-center justify-between space-x-5">
-                <Link to="/" className="">
-                  <BiHome className="text-2xl hover:text-green-600 duration-200" />
-                </Link>
-                <Link to="/" className=" px-">
-                  <IoPersonOutline className="text-2xl hover:text-green-600 duration-200" />
-                </Link>
+              <div className=" gap-4 mr-4">
+                <div className="flex items-center justify-between space-x-5">
+                  <Link to="/" className="">
+                    <BiHome className="text-2xl hover:text-green-600 duration-200" />
+                  </Link>
+                  <Link to="/" className=" px-">
+                    <IoPersonOutline className="text-2xl hover:text-green-600 duration-200" />
+                  </Link>
 
-                <div className="text- hover:text-green-600 duration-200">
-                  <Message />
+                  <div className="text- hover:text-green-600 duration-200">
+                    <Message />
+                  </div>
+                  <div className="mt-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
+                    <ProductSearchCard />
+                  </div>
+                  <div className=" hover:text-green-600 hover:duration-300  hover:transition-colors">
+                    <FiHeart />
+                  </div>
+
+                  <div className="mt-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
+                    <AddToCartButton />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Dropdown Menu */}
-            <div
-              className={`absolute  left-0 top-10 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${
-                isOpen ? "block" : "hidden"
-              }`}
-            >
-              <ul className="flex mt-3 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
-                <li>
-                  <Link to="/" className="animate-button">
-                    MEN
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/shipping-agencies" className="animate-button">
-                    WOMEN
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="animate-button">
-                    KIDS
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/login" className="animate-button">
-                    ELECTRONICS
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/login" className="animate-button">
-                    BUILDINGS
-                  </Link>
-                </li>
-              </ul>
+              {/* Dropdown Menu */}
+              <div
+                className={`absolute  left-0 top-10 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${
+                  isOpen ? "block" : "hidden"
+                }`}
+              >
+                <ul className="flex mt-3 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
+                  <li>
+                    <Link to="/" className="animate-button">
+                      MEN
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/shipping-agencies" className="animate-button">
+                      WOMEN
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/about" className="animate-button">
+                      KIDS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/login" className="animate-button">
+                      ELECTRONICS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/login" className="animate-button">
+                      BUILDINGS
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
             {/* Social Media Icons or Additional Buttons */}
             <div className="flex items-center space-x-5 ">
-              <div className="mt-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
-                <ProductSearchCard />
-              </div>
-              <div className="mb-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
-                <FiHeart />
-              </div>
-
-              {/* <Message /> */}
-              <div className="mt-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
-                <AddToCartButton />
-              </div>
-
               <button
                 className="focus:outline-none sm:hidden"
                 onClick={toggleMenu}
