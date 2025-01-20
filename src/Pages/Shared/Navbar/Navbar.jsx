@@ -6,6 +6,7 @@ import ProductSearchCard from "../Search/Searchwork";
 import Message from "./Message";
 import AddToCartButton from "./AddToCartButton";
 import { FiHeart } from "react-icons/fi";
+import { IoIosSearch } from "react-icons/io";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,8 +40,8 @@ const Navbar = () => {
                   <div className="text- hover:text-green-600 duration-200">
                     <Message />
                   </div>
-                  <div className="mt-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
-                    <ProductSearchCard />
+                  <div className="text-2xl hover:text-green-600 hover:duration-300  hover:transition-colors">
+                    <IoIosSearch />
                   </div>
                   <div className=" hover:text-green-600 hover:duration-300  hover:transition-colors">
                     <FiHeart />
@@ -163,8 +164,8 @@ const Navbar = () => {
             <Message />
           </div>
 
-          <div className="text-2xl mt-2 hover:text-green-600 hover:duration-200">
-            <ProductSearchCard />
+          <div className="text-2xl hover:text-green-600 hover:duration-200">
+            <IoIosSearch />
           </div>
           <div className="text-xl hover:text-green-600 hover:duration-200">
             <FiHeart />
