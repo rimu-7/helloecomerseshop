@@ -6,12 +6,14 @@ import SubcategoryPage from "../Pages/Home/ProductCategory/SubcategoryPage";
 import CategoryPage from "../Pages/Home/ProductCategory/CategoryPage";
 import Home from "../Pages/Home/Home/Home";
 import CustomerCare from "../Pages/CustomerCare/CustomerCare";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />, // Main layout
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
