@@ -189,7 +189,7 @@ const ProductSearchCard = () => {
 
       {/* Modal for Search and Filter */}
       {showModal && (
-        <div className="fixed top-0 z-50 w-full left-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+        <div className=" fixed top-0 z-50 w-full left-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
           <div className="bg-white px-2 h-screen w-full shadow-lg overflow-y-auto relative">
             <div className="flex sticky py-2 z-50 top-0 flex-col md:flex-row gap-4 mb-6 ">
               <div className="relative flex-grow">

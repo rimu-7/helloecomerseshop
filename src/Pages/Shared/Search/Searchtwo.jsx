@@ -3,7 +3,7 @@ import { FaSearch, FaStar, FaMapMarkerAlt } from 'react-icons/fa';
 import { IoIosSearch } from "react-icons/io";
 
 const RestaurantSearchCard = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm,  setSearchTerm] = useState('');
   const [selectedCuisine, setSelectedCuisine] = useState('');
   const [selectedRating, setSelectedRating] = useState('');
 
