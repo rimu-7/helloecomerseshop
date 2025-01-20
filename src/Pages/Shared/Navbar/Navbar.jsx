@@ -6,7 +6,7 @@ import ProductSearchCard from "../Search/Searchwork";
 import Message from "./Message";
 import AddToCartButton from "./AddToCartButton";
 import { FiHeart } from "react-icons/fi";
-import { IoIosSearch } from "react-icons/io";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
                   <Link to="/" className="">
                     <BiHome className="text-2xl hover:text-green-600 duration-200" />
                   </Link>
-                  <Link to="/" className=" px-">
+                  <Link to="/profile" className=" px-">
                     <IoPersonOutline className="text-2xl hover:text-green-600 duration-200" />
                   </Link>
 
@@ -41,11 +41,11 @@ const Navbar = () => {
                     <Message />
                   </div>
                   <div className="text-2xl hover:text-green-600 hover:duration-300  hover:transition-colors">
-                    <IoIosSearch />
+                    <ProductSearchCard />
                   </div>
-                  <div className=" hover:text-green-600 hover:duration-300  hover:transition-colors">
+                  <Link to="/wishtobuy" className=" hover:text-green-600 hover:duration-300  hover:transition-colors">
                     <FiHeart />
-                  </div>
+                  </Link >
 
                   <div className="mt-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
                     <AddToCartButton />
@@ -66,17 +66,17 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/shipping-agencies" className="animate-button">
+                    <Link to="/women" className="animate-button">
                       WOMEN
                     </Link>
                   </li>
                   <li>
-                    <Link to="/about" className="animate-button">
+                    <Link to="/kids" className="animate-button">
                       KIDS
                     </Link>
                   </li>
                   <li>
-                    <Link to="/login" className="animate-button">
+                    <Link to="/electronics" className="animate-button">
                       ELECTRONICS
                     </Link>
                   </li>
@@ -164,9 +164,9 @@ const Navbar = () => {
             <Message />
           </div>
 
-          <div className="text-2xl hover:text-green-600 hover:duration-200">
-            <IoIosSearch />
-          </div>
+          <Link className="text-2xl hover:text-green-600 hover:duration-200">
+            <ProductSearchCard />
+          </Link>
           <div className="text-xl hover:text-green-600 hover:duration-200">
             <FiHeart />
           </div>

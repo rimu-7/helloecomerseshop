@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch, FaStar, FaMapMarkerAlt } from 'react-icons/fa';
+import { IoIosSearch } from "react-icons/io";
 
 const RestaurantSearchCard = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -35,7 +36,7 @@ const RestaurantSearchCard = () => {
             className="w-full py-3 px-4 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
             aria-label="Search restaurants"
           />
-          <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <IoIosSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
         </div>
       </div>
 

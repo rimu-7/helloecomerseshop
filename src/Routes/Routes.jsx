@@ -8,13 +8,18 @@ import Home from "../Pages/Home/Home/Home";
 import CustomerCare from "../Pages/CustomerCare/CustomerCare";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Men from "../Pages/AllProduct/Men";
-
+import Women from "../Pages/AllProduct/Women";
+import Kids from "../Pages/AllProduct/Kids";
+import Electronics from "../Pages/AllProduct/Electronics";
+import ProductCartPage from "../Pages/Shared/Cart/ProductCartPage";
+import Profile from "../Pages/Profile/Profile";
+import WishToBuy from "../Pages/WishToBuy/WishToBuy";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />, // Main layout
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -34,14 +39,37 @@ export const router = createBrowserRouter([
       },
       {
         path: "/customer-care",
-        element: <CustomerCare/>, // Products Page
+        element: <CustomerCare />, // Products Page
       },
       {
-        name:"men",
-        path:"/men",
-        element: < Men/>,
+        name: "men",
+        path: "/men",
+        element: <Men />, //men page
       },
-
+      {
+        path: "/women",
+        element: <Women />,
+      },
+      {
+        path: "/kids",
+        element: <Kids />,
+      },
+      {
+        path: "/electronics",
+        element: <Electronics />,
+      },
+      {
+        path: "/cart",
+        element: <ProductCartPage />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/wishtobuy",
+        element: <WishToBuy />,
+      },
     ],
   },
 ]);

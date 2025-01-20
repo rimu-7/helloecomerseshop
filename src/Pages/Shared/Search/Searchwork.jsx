@@ -3,6 +3,8 @@ import { FaSearch, FaChevronDown } from "react-icons/fa";
 import { TfiSearch } from "react-icons/tfi";
 import { FiShoppingCart, FiSearch, FiChevronDown } from "react-icons/fi";
 import { CiCamera } from "react-icons/ci";
+import { IoIosSearch } from "react-icons/io";
+
 
 const ProductSearchCard = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -179,9 +181,9 @@ const ProductSearchCard = () => {
   return (
     <div>
       {/* Trigger to open the modal */}
-      <div className="">
+      <div className=" mt-2">
         <button onClick={() => setShowModal(true)}>
-          <FiSearch />
+          <IoIosSearch />
         </button>
       </div>
 
