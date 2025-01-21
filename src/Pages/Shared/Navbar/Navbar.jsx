@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Navbard from "./Navbard";
 import { BiHome } from "react-icons/bi";
 import { IoPersonOutline } from "react-icons/io5";
 import ProductSearchCard from "../Search/Searchwork";
@@ -41,7 +42,7 @@ const Navbar = () => {
         isHidden ? "-translate-y-full" : "translate-y-0"
       }`} // Added dynamic class for navbar hide/show effect
     >
-      {" "}
+      <Navbard/>
       <div className="flex items-center justify- px-4 text-xl relative">
         {/* Search Box */}
 
