@@ -14,6 +14,7 @@ import Electronics from "../Pages/AllProduct/Electronics";
 import ProductCartPage from "../Pages/Shared/Cart/ProductCartPage";
 import Profile from "../Pages/Profile/Profile";
 import WishToBuy from "../Pages/WishToBuy/WishToBuy";
+import ProductDetails from "../Pages/AllProduct/ProductDetails/ProductDetails";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "/customer-care",
         element: <CustomerCare />, // Products Page
+      },
+      {
+        path: "/men/details",
+        element: <ProductDetails />, // Products Page
       },
       {
         name: "men",
