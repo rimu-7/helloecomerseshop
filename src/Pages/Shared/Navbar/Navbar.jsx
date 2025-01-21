@@ -42,7 +42,6 @@ const Navbar = () => {
         isHidden ? "-translate-y-full" : "translate-y-0"
       }`} // Added dynamic class for navbar hide/show effect
     >
-      
       <div className="flex items-center justify- px-4 text-xl relative">
         {/* Search Box */}
 
@@ -151,22 +150,22 @@ const Navbar = () => {
         >
           <ul className="flex mt-2 mr-4 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
             <li>
-              <Link to="/" className="animate-button">
+              <Link to="/men" className="animate-button">
                 MEN
               </Link>
             </li>
             <li>
-              <Link to="/shipping-agencies" className="animate-button">
+              <Link to="/women" className="animate-button">
                 WOMEN
               </Link>
             </li>
             <li>
-              <Link to="/about" className="animate-button">
+              <Link to="/kids" className="animate-button">
                 KIDS
               </Link>
             </li>
             <li>
-              <Link to="/login" className="animate-button">
+              <Link to="/electronics" className="animate-button">
                 ELECTRONICS
               </Link>
             </li>
