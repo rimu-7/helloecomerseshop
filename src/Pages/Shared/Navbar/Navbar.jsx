@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BiHome } from "react-icons/bi";
 import { IoPersonOutline } from "react-icons/io5";
@@ -7,20 +7,41 @@ import Message from "./Message";
 import AddToCartButton from "./AddToCartButton";
 import { FiHeart } from "react-icons/fi";
 
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // const openSearch = () => {
-  //   setIsOpen((h) => !h);
-  // }
+  const [isHidden, setIsHidden] = useState(false); // Added state to track navbar visibility
+  const [lastScrollTop, setLastScrollTop] = useState(0); // Added state to track last scroll position
 
   const toggleMenu = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen); // Proper state toggle
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
+  // Added useEffect to handle scroll direction and navbar visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop) {
+        setIsHidden(true); // Hide navbar on scroll down
+      } else {
+        setIsHidden(false); // Show navbar on scroll up
+      }
+
+      setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll); // Prevent negative scroll values
+    };
+
+    window.addEventListener("scroll", handleScroll); // Attach scroll event listener
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup event listener
+  }, [lastScrollTop]);
+
   return (
-    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-3 ">
+    <div
+      className={`bg-gray-50 bg-opacity-60 backdrop-blur-lg py-3 fixed top-0 w-full transition-transform duration-300 ${
+        isHidden ? "-translate-y-full" : "translate-y-0"
+      }`} // Added dynamic class for navbar hide/show effect
+    >
+      {" "}
       <div className="flex items-center justify- px-4 text-xl relative">
         {/* Search Box */}
 
@@ -43,9 +64,12 @@ const Navbar = () => {
                   <div className="text-2xl hover:text-green-600 hover:duration-300  hover:transition-colors">
                     <ProductSearchCard />
                   </div>
-                  <Link to="/wishtobuy" className=" hover:text-green-600 hover:duration-300  hover:transition-colors">
+                  <Link
+                    to="/wishtobuy"
+                    className=" hover:text-green-600 hover:duration-300  hover:transition-colors"
+                  >
                     <FiHeart />
-                  </Link >
+                  </Link>
 
                   <div className="mt-1 hover:text-green-600 hover:duration-300  hover:transition-colors">
                     <AddToCartButton />
