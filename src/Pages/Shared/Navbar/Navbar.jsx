@@ -38,11 +38,11 @@ const Navbar = () => {
 
   return (
     <div
-      className={`bg-gray-50 bg-opacity-60 backdrop-blur-lg py-3 fixed top-0 w-full transition-transform duration-300 ${
+      className={`bg-gray-50 sticky bg-opacity-60 backdrop-blur-lg py-3  top-0 w-full transition-transform duration-300 ${
         isHidden ? "-translate-y-full" : "translate-y-0"
       }`} // Added dynamic class for navbar hide/show effect
     >
-      <Navbard/>
+      
       <div className="flex items-center justify- px-4 text-xl relative">
         {/* Search Box */}
 
