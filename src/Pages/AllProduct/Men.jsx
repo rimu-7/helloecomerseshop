@@ -20,9 +20,9 @@ function Men() {
           menProducts.map((product) => (
             <div
               key={product.id}
-              className="product-item bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all"
+              className="product-item bg-white p-3 rounded-lg shadow-sm hover:shadow-lg transition-all"
             >
-              <Link to="/men/details">
+              <Link to="/details">
                 <img
                   src={product.imageUrl}
                   alt={product.name}
