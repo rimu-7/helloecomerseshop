@@ -13,7 +13,7 @@ function Men() {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-semibold mb-4 text-center">
-        Kid's Products
+        Kids Products
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {menProducts.length > 0 ? (
@@ -58,7 +58,7 @@ function Men() {
             </div>
           ))
         ) : (
-          <p>No men's products available.</p>
+          <p>No kids products available.</p>
         )}
       </div>
     </div>

@@ -5,7 +5,7 @@ import ProductPage from "../Pages/Home/ProductCategory/ProductPage";
 import SubcategoryPage from "../Pages/Home/ProductCategory/SubcategoryPage";
 import CategoryPage from "../Pages/Home/ProductCategory/CategoryPage";
 import Home from "../Pages/Home/Home/Home";
-import CustomerCare from "../Pages/CustomerCare/CustomerCare"; 
+import CustomerCare from "../Pages/CustomerCare/CustomerCare";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Men from "../Pages/AllProduct/Men";
 import Women from "../Pages/AllProduct/Women";
@@ -14,7 +14,7 @@ import Electronics from "../Pages/AllProduct/Electronics";
 import ProductCartPage from "../Pages/Shared/Cart/ProductCartPage";
 import Profile from "../Pages/Profile/Profile";
 import WishToBuy from "../Pages/WishToBuy/WishToBuy";
-import ProductDetails from "../Pages/AllProduct/ProductDetails/ProductDetails";
+import ProductDetails from '../Pages/AllProduct/ProductDetails/ProductDetails'
 
 export const router = createBrowserRouter([
   {
@@ -74,6 +74,11 @@ export const router = createBrowserRouter([
       {
         path: "/wishtobuy",
         element: <WishToBuy />,
+      },
+      {
+        path: "/details/:id",
+        element: <ProductDetails />, // Product Details Page
+        loader: async ({ params }) => fetch(`https://freeapi.vercel.app/products/${params.id}`).then(res => res.json()),
       },
     ],
   },

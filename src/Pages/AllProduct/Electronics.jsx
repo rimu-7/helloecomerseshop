@@ -13,7 +13,7 @@ function Men() {
   return (
     <div className="p-4">
       <h1 className="text-2xl font-semibold mb-4 text-center">
-        Electronic's Products
+        Electronics Products
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {menProducts.length > 0 ? (
@@ -37,13 +37,13 @@ function Men() {
                 <p className="text-gray-900 font-bold text-md mb-2">
                   Price: ${product.price}
                 </p>
-                <p>
+                {/* <p>
                   {product.stock > 0 ? (
                     <span className="text-green-500 text-sm">In Stock</span>
                   ) : (
                     <span className="text-red-500 text-sm">Out of Stock</span>
                   )}
-                </p>
+                </p> */}
                 <div className="flex w-full justify-between items-center ">
                   <Link className="text-gray-500 text-sm hover:text-green-300 hover:duration-300 hover:transition-colors flex items-center">
                     <FiHeart />
@@ -58,7 +58,7 @@ function Men() {
             </div>
           ))
         ) : (
-          <p>No men's products available.</p>
+          <p>No electronics products available.</p>
         )}
       </div>
     </div>
