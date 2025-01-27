@@ -106,7 +106,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link to="/login" className="animate-button">
-                      BUILDINGS
+                    Accessories
                     </Link>
                   </li>
                 </ul>
