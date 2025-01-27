@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { BiAddToQueue } from "react-icons/bi";
-import axios from "axios";
+import { fetchProducts } from "./APIFetching/Api"; // Import the API function
 
 function Men() {
   const [products, setProducts] = useState([]);
@@ -10,25 +10,22 @@ function Men() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const getMenProducts = async () => {
       try {
-        // Replace with your backend API URL
-        const response = await axios.get("https://freeapi.vercel.app/products");
-        const allProducts = response.data.products; // Adjust based on your API response
+        const allProducts = await fetchProducts();
         // Filter products for the "Man" category
-        const menProducts = allProducts.filter(
-          (product) => product.name === "Watch"
+        const MenProducts = allProducts.filter(
+          (product) => product.category === "Men"
         );
-        setProducts(menProducts);
+        setProducts(MenProducts);
       } catch (err) {
-        setError("Failed to fetch products.");
-        console.error(err);
+        setError(err.message);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchProducts();
+    getMenProducts();
   }, []);
 
   if (loading) {
@@ -63,6 +60,13 @@ function Men() {
                 </p>
                 <p className="text-gray-900 font-bold text-md mb-2">
                   Price: ${product.price}
+                </p>
+                <p>
+                  {product.stock > 0 ? (
+                    <span className="text-green-500 text-sm">In Stock</span>
+                  ) : (
+                    <span className="text-red-500 text-sm">Out of Stock</span>
+                  )}
                 </p>
                 <div className="flex w-full justify-between items-center ">
                   <Link className="text-gray-500 text-sm hover:text-green-300 hover:duration-300 hover:transition-colors flex items-center">
