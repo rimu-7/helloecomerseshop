@@ -3,6 +3,7 @@ import { FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { BiAddToQueue } from "react-icons/bi";
 import { fetchProducts } from "./APIFetching/Api"; // Import the API function
+import Loading from "../Shared/Loading/Loading";
 
 function Men() {
   const [products, setProducts] = useState([]);
@@ -29,7 +30,10 @@ function Men() {
   }, []);
 
   if (loading) {
-    return <p>Loading men products...</p>;
+    return (
+      // <Loading/>
+      <p>plase wait men product loading</p>
+    );
   }
 
   if (error) {
@@ -37,7 +41,7 @@ function Men() {
   }
 
   return (
-    <div className="p-4">
+    <div className="p-4 h-screen">
       <h1 className="text-2xl font-semibold mb-4 text-center">Men Products</h1>
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.length > 0 ? (
